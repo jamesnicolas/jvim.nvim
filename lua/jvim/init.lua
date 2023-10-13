@@ -78,7 +78,7 @@ end
 
 local function get_first_child(bufnr)
 	local current_node = get_parent(bufnr, 1)
-	local query = vim.treesitter.parse_query("json", "(pair) @pair")
+	local query = vim.treesitter.query.parse_query("json", "(pair) @pair")
 
 	local lowest = nil
 	local lowest_diff = nil
